@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Deck {
     String Suit[] = {"Heart", "Diamond", "Clubs", "Tiles"};
@@ -23,14 +24,25 @@ public class Deck {
             }
     }
 
+    }
+    public void shuffle(){
 
+        Random random=new Random();
+        for (int i=0;i<6000;i++){
+            int randomindex = random.nextInt(52);
+            Card temp = C1[randomindex];
+            C1[randomindex] = C1[0];
+            C1[0] = temp;
+        }
+
+    }
+
+        public Card[] getCards() {
+            return C1;
+        }
 
     }
 
 
 
-
-
-
-}
 

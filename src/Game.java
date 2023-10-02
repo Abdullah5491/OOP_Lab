@@ -1,6 +1,9 @@
 public class Game {
     public static void main(String[] args) {
-Deck D1=new Deck();
-        System.out.println(D1);
+        Deck deck = new Deck();
+        Players players = new Players();
+
+        players.distributeCards(deck);
+        players.printPlayerCards();
     }
 }
